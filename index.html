@@ -5,46 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Web de los Erizos</title>
     <style>
+        /* Estilo base */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4e1d2; /* Fondo claro */
-            color: #4a3f35; /* Texto en marrón oscuro */
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e0c1; /* Fondo más suave */
+            color: #4a3f35;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
+
         header {
-            text-align: center;
-            background-color: #c49f7b; /* Marrón cálido */
-            padding: 20px;
-        }
-        header h1 {
-            font-size: 3em;
+            background-color: #a17448; /* Color cálido */
             color: white;
-        }
-        .content {
-            margin: 20px;
+            width: 100%;
+            padding: 20px 0;
             text-align: center;
         }
-        .content h2 {
-            color: #6a4e32; /* Marrón oscuro */
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-transform: uppercase;
         }
-        .content p {
-            font-size: 1.2em;
+
+        .content {
+            width: 80%;
+            max-width: 1000px;
+            margin-top: 30px;
+            text-align: center;
         }
-        .erizo-img {
-            max-width: 300px;
-            margin-top: 20px;
+
+        h2 {
+            color: #6a4e32; /* Título en color oscuro */
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
+
         .erizo-info {
-            background-color: #e2d3b3; /* Color crema */
-            border-radius: 10px;
+            display: inline-block;
+            width: 45%;
+            margin: 10px 2.5%;
             padding: 20px;
-            margin-top: 20px;
+            background-color: #e7d5b3;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
         }
+
+        .erizo-info:hover {
+            transform: scale(1.05);
+        }
+
         .erizo-info img {
-            width: 100px;
-            vertical-align: middle;
-            margin-right: 15px;
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .erizo-info p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .erizo-info h3 {
+            font-size: 1.5rem;
+            color: #a17448;
+        }
+
+        .erizo-info .fun-fact {
+            font-style: italic;
+            color: #6a4e32;
+        }
+
+        /* Animación de la imagen principal */
+        .main-erizo {
+            width: 300px;
+            margin-top: 40px;
+            border-radius: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .main-erizo:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #a17448;
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -55,17 +112,35 @@
 </header>
 
 <div class="content">
-    <img src="https://example.com/erizo-imagen.jpg" alt="Erizo simpático" class="erizo-img">
-    <h2>Características del Erizo (con un toque de humor)</h2>
+    <img src="https://example.com/erizo-principal.jpg" alt="Erizo principal" class="main-erizo">
+
+    <h2>Datos Divertidos sobre los Erizos</h2>
+
     <div class="erizo-info">
-        <img src="https://example.com/pequeño-erizo.jpg" alt="Erizo" class="erizo-img">
-        <p>Los erizos son expertos en el arte de rodar en bolas. Si necesitas alguien que se haga el dormido en segundos... ¡un erizo es tu amigo!</p>
+        <img src="https://example.com/erizo1.jpg" alt="Erizo 1">
+        <h3>El Erizo Dormilón</h3>
+        <p>Los erizos son grandes aficionados al sueño. A veces, parece que podrían dormir todo el día si pudieran. ¡Y cuando no duermen, ¡están enrollados en una bola!</p>
+        <p class="fun-fact">¡Un erizo puede dormir hasta 18 horas al día!</p>
     </div>
+
     <div class="erizo-info">
-        <img src="https://example.com/otro-erizo.jpg" alt="Erizo" class="erizo-img">
-        <p>¿Sabías que los erizos son nocturnos? ¡Por eso nunca están en tus fiestas de día! Ellos prefieren las fiestas de medianoche.</p>
+        <img src="https://example.com/erizo2.jpg" alt="Erizo 2">
+        <h3>Erizo Nocturno</h3>
+        <p>Los erizos prefieren la noche. Durante el día, a menudo se esconden para descansar. Son como esos amigos que no te ven nunca durante el día, pero te llaman de noche para salir a divertirse.</p>
+        <p class="fun-fact">¡Los erizos son excelentes exploradores nocturnos!</p>
+    </div>
+
+    <div class="erizo-info">
+        <img src="https://example.com/erizo3.jpg" alt="Erizo 3">
+        <h3>El Erizo Gourmet</h3>
+        <p>Los erizos tienen un paladar exquisito. Se alimentan de insectos, frutas y pequeños animales. Si alguna vez encuentras un erizo en tu jardín, ¡seguro está haciendo una degustación de su menú favorito!</p>
+        <p class="fun-fact">¡Les encanta la comida fresca, pero también pueden comer cosas un poco extrañas!</p>
     </div>
 </div>
+
+<footer>
+    <p>&copy; 2025 La Web de los Erizos - Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
